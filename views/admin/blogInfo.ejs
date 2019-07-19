@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Admin Dashboard</title>
+	<!-- Custom fonts for this template-->
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<!-- Page level plugin CSS-->
+	<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+	<!-- Custom styles for this template-->
+	<link href="css/sb-admin.css" rel="stylesheet">
+</head>
+<body id="page-top">
+
+	<!-- Page Content -->
+	<h1>Blog Info</h1>
+	<hr>
+	<table>
+	<% for(var i=0; i < userList.length; i++){ %>
+		<tr>
+			<td>Name :</td>
+			<td><%=userList[i].name%></td>
+		</tr>
+		<tr>
+			<td>Creator :</td>
+			<td><%=userList[i].creator%></td>
+		</tr>
+		<tr>
+			<td>Contact :</td>
+			<td><%=userList[i].contact%></td>
+		</tr>
+		<tr>
+			<td>Goal : </td>
+			<td><%=userList[i].goal%></td>
+		</tr>
+		<tr>
+			<td>Description: </td>
+			<td><%=userList[i].description%></td>
+		</tr>
+		<tr>
+			<td><a href="/admin"><input type="submit" value="back" ></a></td>
+			<td><a href="/admin/blogInfoEdit"><input type="submit" value="Edit" ></a></td>
+		</tr>
+		<% } %>
+	</table>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin.min.js"></script>
+
+</body>
+
+</html>
